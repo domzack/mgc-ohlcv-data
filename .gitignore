@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Generated outputs from split scripts
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+src/

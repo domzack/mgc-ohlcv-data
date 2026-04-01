@@ -32,6 +32,22 @@ Example: `ohlcv_MGC_2023-01-02.csv` contains January 2nd, 2023 data.
 
 Data available from: **2023-01-02** to **2026-03-23**
 
+## Split do JSON grande por data
+
+Para quebrar um arquivo NDJSON grande em arquivos menores por data (`hd.ts_event`), use:
+
+```bash
+python split_ohlcv_by_date.py glbx-mdp3-20230101-20260323.ohlcv-1m.json data/by-date
+```
+
+O script gera arquivos no formato `ohlcv-YYYY-MM-DD.jsonl`.
+
+Se quiser sobrescrever arquivos já existentes:
+
+```bash
+python split_ohlcv_by_date.py glbx-mdp3-20230101-20260323.ohlcv-1m.json data/by-date --overwrite
+```
+
 ## Contract Rollover Handling
 
 This dataset uses a smart contract rollover strategy:
